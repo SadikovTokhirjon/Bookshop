@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 <h1> profile page</h1>
 {% block content %}
+    <img class="picture-pic" alt="Profile picture" src="{{ user.profile_picture.url }}">
     <p>
         {{ user.username}}
     </p>
