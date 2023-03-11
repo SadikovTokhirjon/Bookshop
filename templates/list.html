@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+    {% block content %}
+        {% if lists %}
+            <ul>
+                {% for list in lists %}
+                    <li>
+                        <a href="{% url 'books:DetailView' list.pk %}">{{ list.title }}</a>
+                        <br>
+                    </li>
+
+                {% endfor %}
+            </ul>
+        {% else %}
+            No books found.
+        {% endif %}
+
+    {% endblock content %}

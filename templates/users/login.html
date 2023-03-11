@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form method="post" >
+        {% csrf_token %}
+        {{ user_login.as_p }}
+        <button>Log in</button>
+        <span class="ms-3">No account? Then <a href="{% url 'users:singup' %}">get registered</a></a></span>
+    </form>
+{% endblock content %}
