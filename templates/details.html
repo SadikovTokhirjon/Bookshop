@@ -1,8 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>{{ details.title }}</h1>
-    <img alt="Cover picture" src="{{ details.cover_picture.url }}">
-    <p>{{ details.description }}
-    {{ details.isbn }}</p>
+     <div class="row mb-4 mt-2">
+                        <div class="col-2 ">
+                              <img class="one-book" alt="cover picture" src="{{ details.cover_picture.url }}">
+                        </div>
+                         <div class="col-6 ms-4">
+                             <h1>{{ details.title }}</h1>
+                             <p>
+                                 {{ details.description}}
+                             </p>
+                             <p>{{ details.isbn }}</p>
+                         </div>
+     </div>
 {% endblock content %}

@@ -1,11 +1,14 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
-    <h1>Profile page</h1>
+    <div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+        <div class="card p-4">
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
          {{ form|crispy}}
-    <button >Changes edit</button>
+    <button class="btn btn-outline-primary" >Changes edit</button>
     </form>
+        </div>
+    </div>
 
 {% endblock content %}

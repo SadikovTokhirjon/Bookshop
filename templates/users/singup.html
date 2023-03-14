@@ -1,10 +1,13 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
-<h1> Registrtion Page</h1>
+<div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+        <div class="card p-4">
     <form method="post" >
         {% csrf_token %}
         {{ form|crispy }}
-        <button type="submit" type="button" class="btn btn-outline-primary">>Sumbit</button>
+        <button type="submit" type="button" class="btn btn-outline-primary">Sumbit</button>
     </form>
+            </div>
+</div>
 {% endblock content %}
