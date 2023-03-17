@@ -8,6 +8,7 @@ class ListView(ListView):
     template_name='list.html'
     queryset=Book.objects.all()
     context_object_name='lists'
+    paginate_by=2
 
 # class ListView(View):
 #     def get(self,request):
